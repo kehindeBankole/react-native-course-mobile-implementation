@@ -6,7 +6,7 @@ import { Link } from 'react-router-native'
 export default function GameCard() {
     return (
 
-        <View style={{ height: 224, width: 296 }}>
+        <View style={{ height: 224}}>
             <LinearGradient colors={['#702EEB', '#FF22B0']} style={{ borderRadius: 20, borderBottomRightRadius: 20 }}>
                 <View style={{
                     width: '100%',

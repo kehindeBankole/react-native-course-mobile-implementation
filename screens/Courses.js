@@ -16,52 +16,72 @@ export default function Courses() {
         {
             id: '58694a0f-3da1-471f-bd96-145571e29d72',
             title: 'Third Item',
-        },
+        }
     ];
     return (
-        <View style={styles.container}>
-            <View style={{ flex: 3 }}>
-                <View>
-                    <Text style={styles.header}>
-                        Fundamentals
-                        Courses
-            </Text>
-                    <Text style={styles.subheader}>
-                        Find the right iOS Game Development course for you. Answer a few questions to see what we'd recommend for you.
-            </Text>
-                </View>
-                <View style={styles.cardlist}>
-                    <FlatList
-                        data={DATA}
-                        renderItem={(d) => (<View style={{ marginRight: 20 }}><GameCard /></View>)}
-                        horizontal={true}
-                        showsHorizontalScrollIndicator={false}
-                    />
-                </View>
-                <View style={{ marginTop: 50 }}>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}><Text style={styles.listheader}>The Fundamentals</Text>
-                    <View style={{marginTop:5}}>
-                    <View style={{height:2 , width:16 , backgroundColor:'#6E6F8B'}}></View>
-                    <View style={{marginTop:5 , height:2 , width:8 , backgroundColor:'#6E6F8B' , marginLeft:'auto'}}></View>
+        <>
+
+            <View style={styles.container}>
+                <View style={{ flex: 20}}>
+
+                    <View>
+                        <Text style={styles.header}>
+                            Fundamentals
+                            Courses
+</Text>
+                        <Text style={styles.subheader}>
+                            Find the right iOS Game Development course for you. Answer a few questions to see what we'd recommend for you.
+</Text>
                     </View>
+                    <View style={styles.cardlist}>
+                        <FlatList
+                            data={DATA}
+                            renderItem={(d) => (<View style={{ marginRight: 20, width: 264 }}><GameCard /></View>)}
+                            horizontal={true}
+                            showsHorizontalScrollIndicator={false}
+                        />
+                    </View>
+                    <View style={{ marginTop: 50, width: '100%' }}>
+
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}><Text style={styles.listheader}>The Fundamentals</Text>
+                            <View style={{ marginTop: 5 }}>
+                                <View style={{ height: 2, width: 16, backgroundColor: '#6E6F8B' }}></View>
+                                <View style={{ marginTop: 5, height: 2, width: 8, backgroundColor: '#6E6F8B', marginLeft: 'auto' }}></View>
+                            </View>
+                        </View>
+                        <FlatList
+                            data={DATA}
+                            renderItem={(d) => (<View style={{ width: 264, marginTop: 20 }}><GameCard /></View>)}
+                        />
+
+                    </View>
+                </View>
+
+                <View style={{ flex: 1 }}>
+                    <View style={styles.bottomnav}>
+                        <BottomNav />
                     </View>
                 </View>
             </View>
-            <View>
-                <View style={styles.bottomnav}>
-                    <BottomNav />
-                </View>
-            </View>
-        </View>
+
+
+
+
+        </>
     )
+
 }
 
 const styles = StyleSheet.create({
     container: {
         paddingHorizontal: 30,
         paddingVertical: 50,
+        // height: '100%',
         height: Dimensions.get('window').height,
         position: 'relative',
+        flex: 13,
+        flexDirection: 'column',
+        justifyContent: "space-between"
     },
     header: {
         color: '#0A3875',
@@ -92,7 +112,7 @@ const styles = StyleSheet.create({
     },
     // bottomnav:{
     //     position:'absolute',
-    //     bottom:0,
+    //     top:0,
 
     // }
 })
