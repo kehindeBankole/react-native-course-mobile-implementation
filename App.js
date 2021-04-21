@@ -5,21 +5,20 @@ import { NativeRouter, Route, Link } from "react-router-native";
 import Courses from './screens/Courses';
 export default function App() {
   return (
-      <ScrollView>
-        <NativeRouter>
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <NativeRouter>
         <View style={styles.container}>
-      {/* <Landing/> */}
-      <Route path="/" component={Landing} exact />
-      <Route path="/courses" component={Courses} exact/>
-    </View>
+          <Route path="/" component={Landing} exact />
+          <Route path="/courses" component={Courses} exact />
+        </View>
       </NativeRouter>
-      </ScrollView>
+    </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
-  container:{
-    height:'100%'
+  container: {
+    height: '100%'
 
   }
 })

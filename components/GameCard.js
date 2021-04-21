@@ -18,7 +18,7 @@ export default function GameCard() {
                         resizeMode: 'cover',
                         position: 'absolute',
                     }} />
-                    <Link to="/" style={{flexDirection:'row' , justifyContent:'center', alignItems:'center', marginTop: 10, marginLeft: 10, backgroundColor: '#FF06FD', width: 92, height: 32  , borderRadius:20}}>
+                    <Link to="/" style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 10, marginLeft: 10, backgroundColor: 'rgba(255, 255, 255, 0.3)', width: 92, height: 32, borderRadius: 20 }}>
                         <Text style={styles.subheader}>play</Text>
                     </Link>
                 </View>
