@@ -1,11 +1,11 @@
 import React from 'react'
 import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
-
+import { NativeRouter, Route, Link } from "react-router-native";
 export default function BottomNav() {
     return (
         <View style={styles.container}>
             <View style={{ flexDirection: 'row', flex: 1 }}>
-                <Image source={require('../assets/Rectangle22.png')} style={{ height: 28, width: 26 }} />
+               <Image source={require('../assets/Rectangle22.png')} style={{ height: 28, width: 26 }} />
                 <Text style={styles.text}>Home</Text>
             </View>
             <View style={{ flexDirection: 'row', marginLeft: 50, justifyContent: 'space-between', flex: 2 }}>

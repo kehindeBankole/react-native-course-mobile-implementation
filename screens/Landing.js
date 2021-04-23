@@ -16,7 +16,7 @@ Fundamentals Courses</Text>
                     <Text style={styles.subheader}>
                         Find the right iOS Game Development course for you. Answer a few questions to see what we'd recommend for you.
 </Text>
-                    <Link to="/courses" style={styles.button} onPress={()=>console.log(12)}>
+                    <Link to="/courses" style={styles.button} >
                         {/* <Pressable style={styles.button}> */}
                             <Text style={styles.buttontext}>get started</Text>
                         {/* </Pressable> */}
