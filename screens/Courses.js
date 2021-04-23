@@ -20,9 +20,9 @@ export default function Courses() {
         }
     ];
     return (
-        <View style={{ flex: 1, height: Dimensions.get('window').height-30, paddingTop:50}}>
+        <View style={{ flex: 1, height: Dimensions.get('window').height - 25, paddingTop: 50 }}>
             <ScrollView showsVerticalScrollIndicator={false}>
-                <View style={{paddingHorizontal:30}}>
+                <View style={{ paddingHorizontal: 30 }}>
                     <Text style={styles.header}>
                         Fundamentals
                         Courses
@@ -35,13 +35,13 @@ export default function Courses() {
                 <View style={styles.cardlist}>
                     <FlatList
                         data={DATA}
-                        renderItem={(d) => (<View style={{ marginRight: 20, width: 264 }}><GameCard /></View>)}
+                        renderItem={(d) => (<View style={{ marginRight: 20, width: 296 }}><GameCard /></View>)}
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}
                     />
                 </View>
 
-                <View style={{ marginTop: 50, width: '100%' , paddingHorizontal:30 }}>
+                <View style={{ marginTop: 50, width: '100%', paddingHorizontal: 30 }}>
 
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}><Text style={styles.listheader}>The Fundamentals</Text>
                         <View style={{ marginTop: 5 }}>
@@ -51,14 +51,14 @@ export default function Courses() {
                     </View>
                     <FlatList
                         data={DATA}
-                        renderItem={(d) => (<View style={{ marginTop: 20 }}><CourseList/></View>)}
+                        renderItem={(d) => (<View style={{ marginTop: 20 }}><CourseList /></View>)}
                     />
 
                 </View>
             </ScrollView>
-                <View style={styles.bottomnav}>
-                    <BottomNav />
-                </View>
+            <View style={styles.bottomnav}>
+                <BottomNav />
+            </View>
         </View>
     )
 
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     },
     cardlist: {
         marginTop: 40,
-        paddingLeft:30
+        paddingLeft: 30
     },
     listheader: {
         color: '#0A3875',
@@ -105,8 +105,8 @@ const styles = StyleSheet.create({
     },
     bottomnav: {
         marginTop: 20,
-        paddingHorizontal:30,
-        paddingBottom:50
+        paddingHorizontal: 30,
+        paddingBottom: 50
     }
 })
 
